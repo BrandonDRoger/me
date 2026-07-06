@@ -326,6 +326,61 @@ main {
   border-radius: 6px;
 }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.skill-card {
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.skill-card:hover {
+  border-color: rgba(94, 230, 255, 0.4);
+}
+
+.skill-card h3 {
+  margin: 0 0 20px;
+  font-size: 1.05rem;
+  color: var(--cyan);
+}
+
+.logo-grid {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 76px;
+  text-align: center;
+}
+
+.logo-grid img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-grid span {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.skill-card .tags {
+  margin-top: 20px;
+}
+
 @media (max-width: 640px) {
   .navbar nav a {
     display: none;

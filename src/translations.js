@@ -72,6 +72,18 @@ export const translations = {
         photoAlt: 'Photo du xénomorphe robotisé',
       },
     },
+    skills: {
+      title: 'Compétences',
+      languages: 'Langages',
+      frameworks: 'Frameworks & librairies',
+      databases: 'Bases de données',
+      network: 'Réseaux & Systèmes',
+      ai: 'IA & Prompt Engineering',
+      tools: 'Méthodes & Outils',
+      networkExtras: ['TCP/IP · Modèle OSI', 'DNS / DHCP', 'Sous-réseaux IPv4 / IPv6', 'VLAN · VPN · Pare-feu'],
+      aiExtras: ['ChatGPT · Agents API', 'Prompt engineering', 'Config. LLM & streaming'],
+      toolsExtras: ['Agile Scrum', 'CI/CD GitLab', 'REST APIs'],
+    },
   },
   en: {
     nav: {
@@ -145,6 +157,18 @@ export const translations = {
         desc: '3D-printed robotic quadruped creature: 12 servos driven by an ESP32, motion-triggered wake-up, screams and attack stance based on distance, and manual control through an embedded Wi-Fi web interface.',
         photoAlt: 'Photo of the robotic xenomorph',
       },
+    },
+    skills: {
+      title: 'Skills',
+      languages: 'Languages',
+      frameworks: 'Frameworks & libraries',
+      databases: 'Databases',
+      network: 'Networking & Systems',
+      ai: 'AI & Prompt Engineering',
+      tools: 'Methods & Tools',
+      networkExtras: ['TCP/IP · OSI model', 'DNS / DHCP', 'IPv4 / IPv6 subnetting', 'VLAN · VPN · Firewall'],
+      aiExtras: ['ChatGPT · API agents', 'Prompt engineering', 'LLM config & streaming'],
+      toolsExtras: ['Agile Scrum', 'GitLab CI/CD', 'REST APIs'],
     },
   },
 }
