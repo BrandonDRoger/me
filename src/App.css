@@ -4,6 +4,25 @@
   z-index: -1;
 }
 
+.lang-toggle {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 10;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.lang-toggle:hover {
+  border-color: var(--cyan);
+}
+
 main {
   max-width: 1100px;
   margin: 0 auto;
