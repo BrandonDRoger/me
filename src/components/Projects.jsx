@@ -57,7 +57,7 @@ function Projects() {
           <p className="project-context">{p.xeno.context}</p>
           <p>{p.xeno.desc}</p>
           <div className="gallery">
-            <img className="gallery-main" src={xenoPhotos[photo]} alt={p.xeno.photoAlt} />
+            <img className="gallery-main" src={xenoPhotos[photo]} alt={p.xeno.photoAlt} loading="lazy" />
             <div className="gallery-thumbs">
               {xenoPhotos.map((src, i) => (
                 <button
@@ -66,7 +66,7 @@ function Projects() {
                   className={i === photo ? 'active' : ''}
                   onClick={() => setPhoto(i)}
                 >
-                  <img src={src} alt="" />
+                  <img src={src} alt="" loading="lazy" />
                 </button>
               ))}
             </div>

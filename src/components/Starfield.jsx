@@ -6,6 +6,7 @@ function Starfield() {
   useEffect(() => {
     const canvas = canvasRef.current
     const ctx = canvas.getContext('2d')
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     let stars = []
     let frame
 
@@ -34,12 +35,12 @@ function Starfield() {
         ctx.arc(star.x, y, star.size, 0, Math.PI * 2)
         ctx.fill()
       }
-      frame = requestAnimationFrame(draw)
+      if (!reduceMotion) frame = requestAnimationFrame(draw)
     }
 
     resize()
     window.addEventListener('resize', resize)
-    frame = requestAnimationFrame(draw)
+    draw(0)
 
     return () => {
       window.removeEventListener('resize', resize)
