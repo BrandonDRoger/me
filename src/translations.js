@@ -84,6 +84,11 @@ export const translations = {
       aiExtras: ['ChatGPT · Agents API', 'Prompt engineering', 'Config. LLM & streaming'],
       toolsExtras: ['Agile Scrum', 'CI/CD GitLab', 'REST APIs'],
     },
+    contact: {
+      title: 'Contact',
+      text: "Une opportunité, un projet, ou simplement envie d'échanger ? Écris-moi.",
+      emailBtn: "M'écrire",
+    },
   },
   en: {
     nav: {
@@ -169,6 +174,11 @@ export const translations = {
       networkExtras: ['TCP/IP · OSI model', 'DNS / DHCP', 'IPv4 / IPv6 subnetting', 'VLAN · VPN · Firewall'],
       aiExtras: ['ChatGPT · API agents', 'Prompt engineering', 'LLM config & streaming'],
       toolsExtras: ['Agile Scrum', 'GitLab CI/CD', 'REST APIs'],
+    },
+    contact: {
+      title: 'Contact',
+      text: 'An opportunity, a project, or just want to chat? Drop me a line.',
+      emailBtn: 'Email me',
     },
   },
 }
