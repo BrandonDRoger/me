@@ -1,11 +1,11 @@
 :root {
-  --bg: #070b1a;
-  --bg-soft: #0d1330;
+  --bg: #030308;
+  --bg-soft: #0a0a14;
   --text: #e8ecf8;
   --muted: #9aa3c0;
   --violet: #8b7cf8;
   --cyan: #5ee6ff;
-  --card: rgba(20, 27, 58, 0.6);
+  --card: rgba(14, 15, 28, 0.6);
   --border: rgba(139, 124, 248, 0.25);
 }
 
@@ -23,8 +23,8 @@ body {
   font-family: 'Space Grotesk', system-ui, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(ellipse 60% 40% at 20% 0%, rgba(139, 124, 248, 0.14), transparent),
-    radial-gradient(ellipse 50% 40% at 85% 55%, rgba(94, 230, 255, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 20% 0%, rgba(139, 124, 248, 0.1), transparent),
+    radial-gradient(ellipse 50% 40% at 85% 55%, rgba(94, 230, 255, 0.05), transparent),
     var(--bg);
   background-attachment: fixed;
   overflow-x: clip;

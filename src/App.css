@@ -81,7 +81,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 14px 24px;
-  background: rgba(7, 11, 26, 0.7);
+  background: rgba(3, 3, 8, 0.7);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -203,7 +203,7 @@ main {
   width: 190vw;
   height: 190vw;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 0%, rgba(139, 124, 248, 0.22), rgba(13, 19, 48, 0.95) 26%, var(--bg) 55%);
+  background: radial-gradient(circle at 50% 0%, rgba(139, 124, 248, 0.22), rgba(9, 9, 20, 0.95) 26%, var(--bg) 55%);
   border-top: 1px solid rgba(139, 124, 248, 0.55);
   box-shadow:
     0 -18px 70px rgba(139, 124, 248, 0.35),
@@ -942,7 +942,7 @@ main {
   font-size: 1.5rem;
   line-height: 1;
   color: var(--text);
-  background: rgba(7, 11, 26, 0.65);
+  background: rgba(3, 3, 8, 0.65);
   border: 1px solid var(--border);
   border-radius: 50%;
   cursor: pointer;
@@ -951,7 +951,7 @@ main {
 
 .gallery-arrow:hover {
   border-color: var(--cyan);
-  background: rgba(7, 11, 26, 0.85);
+  background: rgba(3, 3, 8, 0.85);
 }
 
 .gallery-arrow.prev {
@@ -970,7 +970,7 @@ main {
   padding: 3px 10px;
   border-radius: 999px;
   color: var(--text);
-  background: rgba(7, 11, 26, 0.65);
+  background: rgba(3, 3, 8, 0.65);
 }
 
 .gallery-thumbs {
