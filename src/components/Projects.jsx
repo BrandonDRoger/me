@@ -34,33 +34,12 @@ function Projects() {
       <img className="astro astro-jupiter" src={jupiter} alt="" aria-hidden="true" />
       <h2 data-ghost={p.ghost}>{p.title}</h2>
 
-      <article className="mission" data-num="01">
+      <article className="mission mission-wide" data-num="01">
         <div className="mission-info">
-          <p className="mission-label">{p.mission} 01 — Evident Scientific</p>
-          <h3>{p.magasin.name}</h3>
-          <div className="mission-badges">
-            <span className="badge badge-star">★ {p.featured}</span>
-            <span className="badge">{p.production}</span>
-          </div>
-          <p>{p.magasin.desc}</p>
-          <ul className="tags">
-            {['C#', 'ASP.NET Web API', 'SQL Server', 'JavaScript', 'Razor'].map((tag) => (
-              <li key={tag}>{tag}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="mission-visual metric-panel" onMouseMove={tilt} onMouseLeave={untilt}>
-          <span className="metric-value">{p.magasin.metric}</span>
-          <span className="metric-unit">{p.magasin.metricUnit}</span>
-          <span className="metric-caption">{p.magasin.metricCaption}</span>
-        </div>
-      </article>
-
-      <article className="mission reverse" data-num="02">
-        <div className="mission-info">
-          <p className="mission-label">{p.mission} 02 — Freelance</p>
+          <p className="mission-label">{p.mission} 01 — Freelance</p>
           <h3>{p.primavera.name}</h3>
           <div className="mission-badges">
+            <span className="badge badge-star">★ {p.featured}</span>
             <span className="badge">{p.production}</span>
           </div>
           <p>{p.primavera.desc}</p>
@@ -84,6 +63,27 @@ function Projects() {
             title={p.primavera.name}
             loading="lazy"
           />
+        </div>
+      </article>
+
+      <article className="mission reverse" data-num="02">
+        <div className="mission-info">
+          <p className="mission-label">{p.mission} 02 — Evident Scientific</p>
+          <h3>{p.magasin.name}</h3>
+          <div className="mission-badges">
+            <span className="badge">{p.production}</span>
+          </div>
+          <p>{p.magasin.desc}</p>
+          <ul className="tags">
+            {['C#', 'ASP.NET Web API', 'SQL Server', 'JavaScript', 'Razor'].map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="mission-visual metric-panel" onMouseMove={tilt} onMouseLeave={untilt}>
+          <span className="metric-value">{p.magasin.metric}</span>
+          <span className="metric-unit">{p.magasin.metricUnit}</span>
+          <span className="metric-caption">{p.magasin.metricCaption}</span>
         </div>
       </article>
 

@@ -357,6 +357,7 @@ main {
   border-radius: 999px;
   font-weight: 600;
   color: var(--text);
+  background: transparent;
   border: 1px solid var(--border);
   transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
@@ -899,6 +900,10 @@ main {
   order: 2;
 }
 
+.mission-wide {
+  grid-template-columns: 0.65fr 1.35fr;
+}
+
 .mission-label {
   font-size: 0.8rem;
   font-weight: 600;
@@ -1052,7 +1057,7 @@ main {
 .browser iframe {
   display: block;
   width: 100%;
-  height: 340px;
+  height: 520px;
   border: none;
   background: #fff;
 }
