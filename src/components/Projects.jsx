@@ -7,6 +7,7 @@ import xeno3 from '../assets/xenomorph/xenomorph-3.jpg'
 import xeno4 from '../assets/xenomorph/xenomorph-4.jpg'
 import xeno5 from '../assets/xenomorph/xenomorph-5.jpg'
 import xeno6 from '../assets/xenomorph/xenomorph-6.jpg'
+import jupiter from '../assets/astres/jupiter.jpg'
 
 const xenoPhotos = [xeno1, xeno2, xeno3, xeno4, xeno5, xeno6]
 
@@ -30,6 +31,7 @@ function Projects() {
 
   return (
     <section id="projects" className="section reveal" ref={ref}>
+      <img className="astro astro-jupiter" src={jupiter} alt="" aria-hidden="true" />
       <h2 data-ghost={p.ghost}>{p.title}</h2>
 
       <article className="mission" data-num="01">
