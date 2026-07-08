@@ -7,16 +7,26 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
+      available: 'Disponible pour de nouvelles opportunités',
       hello: 'Salut, moi c’est',
-      role: "Développeur d'applications · Full-Stack · DevOps · IA",
+      rolePrefix: 'Développeur',
+      roles: ['Full-Stack', 'Java / Spring Boot', 'C# / .NET', 'React', 'IoT & Robotique', "d'agents IA"],
       tagline:
         "Je conçois des applications complètes, de la base de données à l'interface, avec un faible pour l'intégration d'agents IA.",
-      ctaProjects: 'Voir mes projets',
+      ctaProjects: 'Voir mes missions',
       ctaContact: 'Me contacter',
+      location: 'Québec, Canada',
     },
     about: {
       title: 'À propos',
+      ghost: 'Trajectoire',
       bio: "Développeur full-stack diplômé en Technique informatique, à l'aise autant côté backend (Java / Spring Boot, C# / .NET) que côté frontend (React, JavaScript). Lors de mon stage chez Evident Scientific, j'ai développé et livré en production un module complet — de la base de données à l'interface — ainsi qu'un pipeline d'analyse propulsé par un agent IA. Bilingue français / anglais.",
+      stats: [
+        { value: 2, label: 'applications en production' },
+        { value: 10, suffix: '+', label: 'technologies maîtrisées' },
+        { value: 12, label: 'servomoteurs sur mon robot' },
+        { value: 2, label: 'langues parlées' },
+      ],
       timeline: [
         {
           period: '2022',
@@ -52,18 +62,25 @@ export const translations = {
     },
     projects: {
       title: 'Projets',
+      ghost: 'Missions',
+      mission: 'Mission',
       production: 'En production',
+      featured: 'Projet phare',
       magasin: {
         name: 'Cueillette Magasin',
         context: 'Evident Scientific (Groupe Wabtec) — Stage 2026',
         desc: "Module de cueillette en magasin développé de bout en bout : architecture en couches, logique métier, API REST et interface web, déployé en production.",
         result: 'Temps de cueillette réduit de 15 à 5 minutes',
+        metric: '15 → 5',
+        metricUnit: 'minutes par cueillette',
+        metricCaption: 'déployé en production chez Evident Scientific',
       },
       primavera: {
         name: 'Académie Primavera',
         context: 'Client réel — Travailleur autonome',
-        desc: "Site web d'une académie de soccer junior et senior, conçu et développé sur mesure, avec maintenance continue depuis la mise en ligne.",
+        desc: "Site web d'une académie de soccer junior et senior, conçu et développé sur mesure, avec maintenance continue depuis la mise en ligne. Aperçu en direct ci-contre — c'est le vrai site.",
         linkLabel: 'Visiter le site',
+        liveLabel: 'Aperçu en direct',
       },
       xeno: {
         name: 'Xénomorphe IoT',
@@ -74,6 +91,7 @@ export const translations = {
     },
     skills: {
       title: 'Compétences',
+      ghost: 'Arsenal',
       languages: 'Langages',
       frameworks: 'Frameworks & librairies',
       databases: 'Bases de données',
@@ -86,9 +104,15 @@ export const translations = {
     },
     contact: {
       title: 'Contact',
-      text: "Une opportunité, un projet, ou simplement envie d'échanger ? Écris-moi.",
+      ghost: 'Transmission',
+      big: 'Construisons quelque chose ensemble.',
+      text: "Une opportunité, un projet, ou simplement envie d'échanger ? Mon vaisseau est à l'écoute.",
       emailBtn: "M'écrire",
+      copy: "Copier l'adresse",
+      copied: 'Copié ✓',
     },
+    toTop: 'Retour en haut',
+    footer: 'Conçu et développé par mes soins · React + Vite',
   },
   en: {
     nav: {
@@ -98,16 +122,26 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
+      available: 'Open to new opportunities',
       hello: 'Hi, I’m',
-      role: 'Application Developer · Full-Stack · DevOps · AI',
+      rolePrefix: 'I build with',
+      roles: ['Java / Spring Boot', 'C# / .NET', 'React', 'IoT & Robotics', 'AI agents'],
       tagline:
         'I build complete applications, from the database to the interface, with a soft spot for AI agent integration.',
-      ctaProjects: 'See my projects',
+      ctaProjects: 'See my missions',
       ctaContact: 'Get in touch',
+      location: 'Québec City, Canada',
     },
     about: {
       title: 'About',
+      ghost: 'Trajectory',
       bio: 'Full-stack developer with a college degree in Computer Science Technology, comfortable on the backend (Java / Spring Boot, C# / .NET) as much as on the frontend (React, JavaScript). During my internship at Evident Scientific, I built and shipped to production a complete module — from the database to the interface — along with an analysis pipeline powered by an AI agent. Bilingual French / English.',
+      stats: [
+        { value: 2, label: 'apps in production' },
+        { value: 10, suffix: '+', label: 'technologies' },
+        { value: 12, label: 'servos on my robot' },
+        { value: 2, label: 'languages spoken' },
+      ],
       timeline: [
         {
           period: '2022',
@@ -143,18 +177,25 @@ export const translations = {
     },
     projects: {
       title: 'Projects',
+      ghost: 'Missions',
+      mission: 'Mission',
       production: 'In production',
+      featured: 'Flagship project',
       magasin: {
         name: 'Cueillette Magasin',
         context: 'Evident Scientific (Wabtec Group) — 2026 internship',
         desc: 'In-store picking module built end to end: layered architecture, business logic, REST API and web interface, deployed to production.',
         result: 'Picking time reduced from 15 to 5 minutes',
+        metric: '15 → 5',
+        metricUnit: 'minutes per picking run',
+        metricCaption: 'deployed to production at Evident Scientific',
       },
       primavera: {
         name: 'Académie Primavera',
         context: 'Real client — Freelance',
-        desc: 'Website for a junior and senior soccer academy, designed and built from scratch, with ongoing maintenance since launch.',
+        desc: 'Website for a junior and senior soccer academy, designed and built from scratch, with ongoing maintenance since launch. Live preview on the side — that is the real website.',
         linkLabel: 'Visit the website',
+        liveLabel: 'Live preview',
       },
       xeno: {
         name: 'IoT Xenomorph',
@@ -165,6 +206,7 @@ export const translations = {
     },
     skills: {
       title: 'Skills',
+      ghost: 'Arsenal',
       languages: 'Languages',
       frameworks: 'Frameworks & libraries',
       databases: 'Databases',
@@ -177,8 +219,14 @@ export const translations = {
     },
     contact: {
       title: 'Contact',
-      text: 'An opportunity, a project, or just want to chat? Drop me a line.',
+      ghost: 'Transmission',
+      big: "Let's build something together.",
+      text: 'An opportunity, a project, or just want to chat? My ship is listening.',
       emailBtn: 'Email me',
+      copy: 'Copy address',
+      copied: 'Copied ✓',
     },
+    toTop: 'Back to top',
+    footer: 'Designed & built by me · React + Vite',
   },
 }
