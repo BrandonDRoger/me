@@ -1,4 +1,5 @@
 import { useLanguage } from '../LanguageContext'
+import useReveal from '../useReveal'
 import java from '../assets/logos/java.svg'
 import csharp from '../assets/logos/csharp.svg'
 import kotlin from '../assets/logos/kotlin.svg'
@@ -23,6 +24,7 @@ import claude from '../assets/logos/claude.svg'
 
 function Skills() {
   const { t } = useLanguage()
+  const ref = useReveal()
   const s = t.skills
 
   const categories = [
@@ -81,8 +83,8 @@ function Skills() {
   ]
 
   return (
-    <section id="skills" className="section">
-      <h2>{s.title}</h2>
+    <section id="skills" className="section reveal" ref={ref}>
+      <h2 data-ghost={s.ghost}>{s.title}</h2>
       <div className="skills-grid">
         {categories.map((cat) => (
           <div className="skill-card" key={cat.title}>
