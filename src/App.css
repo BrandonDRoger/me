@@ -607,7 +607,7 @@ main {
 
 .constellation {
   position: relative;
-  height: 470px;
+  height: 640px;
   margin-top: 50px;
 }
 
@@ -619,17 +619,23 @@ main {
   overflow: visible;
 }
 
-.constellation polyline {
+.constellation polyline,
+.constellation line {
   fill: none;
   stroke: rgba(94, 230, 255, 0.5);
   stroke-width: 1.5;
   vector-effect: non-scaling-stroke;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  transition: stroke-dashoffset 2.4s ease 0.4s;
+  transition: stroke-dashoffset 4.5s ease-in-out 0.4s;
 }
 
-.reveal.visible .constellation polyline {
+.constellation line {
+  transition: stroke-dashoffset 1.2s ease 4.9s;
+}
+
+.reveal.visible .constellation polyline,
+.reveal.visible .constellation line {
   stroke-dashoffset: 0;
 }
 
@@ -650,8 +656,8 @@ main {
 
 .reveal.visible .c-star {
   animation:
-    pop 0.5s both calc(0.4s + var(--i) * 0.35s),
-    twinkle 3s ease-in-out infinite calc(1s + var(--i) * 0.4s);
+    pop 0.7s both calc(0.4s + var(--i) * 0.9s),
+    twinkle 3s ease-in-out infinite calc(1.4s + var(--i) * 0.9s);
 }
 
 @keyframes pop {
@@ -680,7 +686,7 @@ main {
 }
 
 .reveal.visible .c-chip {
-  animation: chipIn 0.5s both calc(0.6s + var(--i) * 0.35s);
+  animation: chipIn 0.8s both calc(0.8s + var(--i) * 0.9s);
 }
 
 @keyframes chipIn {
@@ -696,7 +702,22 @@ main {
 }
 
 .c-node.edge-l .c-chip {
-  transform: translateX(-18%);
+  transform: translateX(-25%);
+}
+
+@media (max-width: 1000px) {
+  .c-chip {
+    max-width: 150px;
+    padding: 8px 10px;
+  }
+
+  .c-chip h3 {
+    font-size: 0.82rem;
+  }
+
+  .c-chip p {
+    font-size: 0.74rem;
+  }
 }
 
 .c-node.edge-r .c-chip {

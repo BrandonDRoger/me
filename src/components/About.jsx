@@ -2,13 +2,14 @@ import { useEffect, useRef, useState } from 'react'
 import { useLanguage } from '../LanguageContext'
 import useReveal from '../useReveal'
 
+// la Grande Ourse : 2 étoiles de manche + 4 étoiles de cuve
 const starMap = [
-  { x: 7, y: 72, side: 'top' },
-  { x: 22, y: 34, side: 'bottom' },
-  { x: 40, y: 64, side: 'top' },
-  { x: 58, y: 20, side: 'bottom' },
-  { x: 76, y: 62, side: 'top' },
-  { x: 93, y: 24, side: 'bottom' },
+  { x: 5, y: 12, side: 'bottom', edge: 'edge-l' },
+  { x: 28, y: 36, side: 'top' },
+  { x: 40, y: 58, side: 'top' },
+  { x: 36, y: 80, side: 'bottom' },
+  { x: 68, y: 84, side: 'bottom' },
+  { x: 64, y: 44, side: 'top' },
 ]
 
 function Stat({ value, suffix = '', label }) {
@@ -73,11 +74,18 @@ function About() {
             points={starMap.map((s) => `${s.x},${s.y}`).join(' ')}
             pathLength="1"
           />
+          <line
+            x1={starMap[5].x}
+            y1={starMap[5].y}
+            x2={starMap[2].x}
+            y2={starMap[2].y}
+            pathLength="1"
+          />
         </svg>
         {t.about.timeline.map((step, i) => (
           <div
             key={step.title}
-            className={`c-node ${starMap[i].side}${i === 0 ? ' edge-l' : ''}${i === starMap.length - 1 ? ' edge-r' : ''}`}
+            className={`c-node ${starMap[i].side} ${starMap[i].edge || ''}`}
             style={{ left: `${starMap[i].x}%`, top: `${starMap[i].y}%`, '--i': i }}
           >
             <span className="c-star" />

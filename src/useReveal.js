@@ -7,10 +7,7 @@ function useReveal() {
     const el = ref.current
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('visible')
-          observer.disconnect()
-        }
+        el.classList.toggle('visible', entry.isIntersecting)
       },
       { rootMargin: '0px 0px -10% 0px' }
     )
