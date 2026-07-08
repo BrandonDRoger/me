@@ -16,26 +16,37 @@ function Stat({ value, suffix = '', label }) {
   const [display, setDisplay] = useState(0)
 
   useEffect(() => {
+    let frame
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting) return
-        observer.disconnect()
+        cancelAnimationFrame(frame)
+        if (!entry.isIntersecting) {
+          setDisplay(0)
+          return
+        }
         const start = performance.now()
         function tick(now) {
-          const p = Math.min((now - start) / 1200, 1)
+          const p = Math.min((now - start) / 2600, 1)
           setDisplay(Math.round(value * (1 - Math.pow(1 - p, 3))))
-          if (p < 1) requestAnimationFrame(tick)
+          if (p < 1) frame = requestAnimationFrame(tick)
         }
-        requestAnimationFrame(tick)
+        frame = requestAnimationFrame(tick)
       },
       { threshold: 0.5 }
     )
     observer.observe(ref.current)
-    return () => observer.disconnect()
+    return () => {
+      cancelAnimationFrame(frame)
+      observer.disconnect()
+    }
   }, [value])
 
   return (
     <li ref={ref}>
+      <span className="stat-orbit" aria-hidden="true">
+        <span className="stat-moon m1" />
+        <span className="stat-moon m2" />
+      </span>
       <span className="stat-number">{display}{suffix}</span>
       <span className="stat-label">{label}</span>
     </li>

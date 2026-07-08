@@ -24,7 +24,7 @@ export const translations = {
       stats: [
         { value: 2, label: 'applications en production' },
         { value: 10, suffix: '+', label: 'technologies maîtrisées' },
-        { value: 12, label: 'servomoteurs sur mon robot' },
+        { value: 3, label: 'années de code' },
         { value: 2, label: 'langues parlées' },
       ],
       timeline: [
@@ -139,7 +139,7 @@ export const translations = {
       stats: [
         { value: 2, label: 'apps in production' },
         { value: 10, suffix: '+', label: 'technologies' },
-        { value: 12, label: 'servos on my robot' },
+        { value: 3, label: 'years of coding' },
         { value: 2, label: 'languages spoken' },
       ],
       timeline: [
