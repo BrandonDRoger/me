@@ -21,7 +21,7 @@ import gitlab from '../assets/logos/gitlab.svg'
 import github from '../assets/logos/github.svg'
 import cisco from '../assets/logos/cisco.svg'
 import claude from '../assets/logos/claude.svg'
-import moon from '../assets/astres/moon.jpg'
+import Astro from './Astro'
 
 function Skills() {
   const { t } = useLanguage()
@@ -85,7 +85,10 @@ function Skills() {
 
   return (
     <section id="skills" className="section reveal" ref={ref}>
-      <img className="astro astro-moon" src={moon} alt="" aria-hidden="true" />
+      <Astro id="moon" />
+      <Astro id="mercury" />
+      <Astro id="uranus" />
+      <Astro id="quasar" />
       <h2 data-ghost={s.ghost}>{s.title}</h2>
       <div className="skills-grid">
         {categories.map((cat) => (

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLanguage } from '../LanguageContext'
 import useReveal from '../useReveal'
+import Astro from './Astro'
 
 // la Grande Ourse : 2 étoiles de manche + 4 étoiles de cuve
 const starMap = [
@@ -60,6 +61,9 @@ function About() {
 
   return (
     <section id="about" className="section reveal" ref={ref}>
+      <Astro id="andromeda" />
+      <Astro id="pluto" />
+      <Astro id="earth" />
       <h2 data-ghost={t.about.ghost}>{t.about.title}</h2>
       <p className="about-bio">{t.about.bio}</p>
       <ul className="stats">

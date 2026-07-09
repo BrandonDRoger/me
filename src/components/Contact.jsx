@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useLanguage } from '../LanguageContext'
 import useReveal from '../useReveal'
-import neptune from '../assets/astres/neptune.jpg'
+import Astro from './Astro'
 
 const user = 'brandonfotio'
 const domain = 'gmail.com'
@@ -20,7 +20,8 @@ function Contact() {
 
   return (
     <section id="contact" className="section contact reveal" ref={ref}>
-      <img className="astro astro-neptune" src={neptune} alt="" aria-hidden="true" />
+      <Astro id="neptune" />
+      <Astro id="blackhole" />
       <h2 data-ghost={t.contact.ghost}>{t.contact.title}</h2>
       <p className="contact-big">{t.contact.big}</p>
       <p>{t.contact.text}</p>

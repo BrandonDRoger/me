@@ -30,7 +30,7 @@ function App() {
       </main>
       <footer>
         <p>© {new Date().getFullYear()} Darren Brandon Fotio Tatio</p>
-        <p>{t.footer} · Photos : NASA/JPL</p>
+        <p>{t.footer} · Photos : NASA/JPL · EHT</p>
       </footer>
       <BackToTop />
     </>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useLanguage } from '../LanguageContext'
-import saturn from '../assets/astres/saturn.jpg'
+import Astro from './Astro'
 
 function useTypewriter(words) {
   const [text, setText] = useState('')
@@ -41,7 +41,8 @@ function Hero() {
 
   return (
     <section className="hero">
-      <img className="astro astro-saturn" src={saturn} alt="" aria-hidden="true" />
+      <Astro id="saturn" />
+      <Astro id="sun" />
       <div className="hero-content">
         <p className="hero-badge">
           <span className="pulse" />
