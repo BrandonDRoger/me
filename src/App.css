@@ -214,9 +214,18 @@ main {
 
 .astro {
   position: absolute;
-  mix-blend-mode: screen;
-  pointer-events: none;
+  display: block;
   animation: float 11s ease-in-out infinite;
+}
+
+.astro img {
+  display: block;
+  width: 100%;
+  transition: filter 0.3s;
+}
+
+.astro:hover img {
+  filter: brightness(1.2) drop-shadow(0 0 22px rgba(94, 230, 255, 0.3));
 }
 
 .astro-saturn {
@@ -249,6 +258,87 @@ main {
   animation-duration: 13s;
 }
 
+.astro-sun {
+  top: 22%;
+  left: -110px;
+  width: min(210px, 22vw);
+  animation-duration: 13s;
+}
+
+.astro-andromeda {
+  top: 20px;
+  right: -80px;
+  width: min(260px, 26vw);
+  opacity: 0.75;
+  animation-duration: 16s;
+}
+
+.astro-pluto {
+  bottom: 14%;
+  left: -60px;
+  width: min(140px, 15vw);
+  opacity: 0.85;
+  animation-duration: 12s;
+}
+
+.astro-earth {
+  top: 44%;
+  right: -60px;
+  width: min(150px, 16vw);
+  animation-duration: 14s;
+}
+
+.astro-mars {
+  top: 31%;
+  left: -90px;
+  width: min(180px, 18vw);
+  animation-duration: 15s;
+}
+
+.astro-venus {
+  top: 58%;
+  right: -70px;
+  width: min(160px, 16vw);
+  animation-duration: 12s;
+}
+
+.astro-supernova {
+  bottom: 3%;
+  left: -100px;
+  width: min(250px, 25vw);
+  opacity: 0.8;
+  animation-duration: 18s;
+}
+
+.astro-mercury {
+  bottom: -40px;
+  left: -70px;
+  width: min(150px, 16vw);
+  animation-duration: 13s;
+}
+
+.astro-uranus {
+  bottom: 22%;
+  right: -50px;
+  width: min(140px, 15vw);
+  animation-duration: 16s;
+}
+
+.astro-quasar {
+  top: 48%;
+  left: -90px;
+  width: min(200px, 20vw);
+  opacity: 0.7;
+  animation-duration: 17s;
+}
+
+.astro-blackhole {
+  top: 6%;
+  right: 4%;
+  width: min(150px, 16vw);
+  animation-duration: 12s;
+}
+
 @keyframes float {
   50% { transform: translateY(-16px); }
 }
@@ -261,9 +351,11 @@ main {
   padding: 6px 14px;
   margin: 0 0 22px;
   font-size: 0.85rem;
-  color: #7df8c9;
-  background: rgba(125, 248, 201, 0.08);
-  border: 1px solid rgba(125, 248, 201, 0.35);
+  color: var(--cyan);
+  background:
+    linear-gradient(rgba(10, 10, 20, 0.85), rgba(10, 10, 20, 0.85)) padding-box,
+    linear-gradient(90deg, var(--violet), var(--cyan)) border-box;
+  border: 1px solid transparent;
   border-radius: 999px;
 }
 
@@ -271,14 +363,14 @@ main {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #7df8c9;
+  background: var(--cyan);
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(125, 248, 201, 0.5); }
-  70% { box-shadow: 0 0 0 8px rgba(125, 248, 201, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(125, 248, 201, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(94, 230, 255, 0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(94, 230, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(94, 230, 255, 0); }
 }
 
 .hero-hello {
@@ -939,20 +1031,20 @@ main {
   font-weight: 600;
   padding: 4px 12px;
   border-radius: 999px;
-  color: #7df8c9;
-  background: rgba(125, 248, 201, 0.12);
-  border: 1px solid rgba(125, 248, 201, 0.35);
+  color: #c9d2ec;
+  background:
+    linear-gradient(rgba(10, 10, 20, 0.85), rgba(10, 10, 20, 0.85)) padding-box,
+    linear-gradient(90deg, rgba(139, 124, 248, 0.7), rgba(94, 230, 255, 0.7)) border-box;
+  border: 1px solid transparent;
 }
 
 .badge-star {
-  color: #ffd9a0;
-  background: rgba(255, 217, 160, 0.1);
-  border-color: rgba(255, 217, 160, 0.35);
+  color: #cbb8ff;
 }
 
 .badge-live {
   margin-left: auto;
-  color: #7df8c9;
+  color: var(--cyan);
 }
 
 .tags {
@@ -1073,9 +1165,9 @@ main {
 .gallery-main {
   display: block;
   width: 100%;
-  height: 340px;
+  aspect-ratio: 3 / 4;
+  height: auto;
   object-fit: cover;
-  object-position: center 30%;
 }
 
 .gallery-arrow {
@@ -1349,6 +1441,20 @@ footer p {
   .astro-neptune {
     left: -50px;
     opacity: 0.55;
+  }
+
+  .astro-sun,
+  .astro-andromeda,
+  .astro-pluto,
+  .astro-earth,
+  .astro-mars,
+  .astro-venus,
+  .astro-supernova,
+  .astro-mercury,
+  .astro-uranus,
+  .astro-quasar,
+  .astro-blackhole {
+    display: none;
   }
 
   .horizon {
